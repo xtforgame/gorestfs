@@ -1,0 +1,13 @@
+go fmt ./...&&go run bptd.go ./tmp/data
+
+go fmt ./...&&go test ./... -v
+
+
+bash docker/alpine3.7/build.sh \
+  && bash docker/alpine3.7/test.sh
+
+bash docker/bin/build.sh
+
+
+
+go fmt ./...&&go run simple_client.go
